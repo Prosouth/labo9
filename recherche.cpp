@@ -4,20 +4,3 @@
  * and open the template in the editor.
  */
 
-/* 
- * File:   main.cpp
- * Author: Nair
- *
- * Created on 10. janvier 2017, 10:48
- */
-
-#include <cstdlib>
-
-using namespace std;
-
-
-int main(int argc, char** argv) {
-
-   return 0;
-}
-

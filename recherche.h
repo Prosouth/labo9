@@ -5,19 +5,15 @@
  */
 
 /* 
- * File:   main.cpp
- * Author: Nair
+ * File:   recherche.h
+ * Author: prosouth
  *
- * Created on 10. janvier 2017, 10:48
+ * Created on 09 January 2017, 10:48
  */
 
-#include <cstdlib>
+#ifndef RECHERCHE_H
+#define RECHERCHE_H
 
-using namespace std;
 
 
-int main(int argc, char** argv) {
-
-   return 0;
-}
-
+#endif /* RECHERCHE_H */

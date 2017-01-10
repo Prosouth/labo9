@@ -5,19 +5,18 @@
  */
 
 /* 
- * File:   main.cpp
- * Author: Nair
+ * File:   lecture.h
+ * Author: prosouth
  *
- * Created on 10. janvier 2017, 10:48
+ * Created on 09 January 2017, 10:47
  */
 
-#include <cstdlib>
-
+#ifndef LECTURE_H
+#define LECTURE_H
+#include <vector>
+#include <string>
 using namespace std;
 
+vector<string> lecture(string nomDuFichier);
 
-int main(int argc, char** argv) {
-
-   return 0;
-}
-
+#endif /* LECTURE_H */
