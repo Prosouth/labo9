@@ -8,12 +8,18 @@
  * File:   recherche.h
  * Author: prosouth
  *
- * Created on 09 January 2017, 10:48
+ * Created on 10 January 2017, 11:39
  */
 
 #ifndef RECHERCHE_H
 #define RECHERCHE_H
+#include <vector>
+#include <string>
 
+using namespace std;
+
+int rechercheLineaire(const vector<string>& dictionnaire, string motCherche);
 
 
 #endif /* RECHERCHE_H */
+

@@ -6,16 +6,20 @@
 #include "lecture.h"
 #include <fstream>
 #include <iostream>
-
 using namespace std;
 
 vector<string> lecture(string nomDuFichier)
 {
    ifstream s(nomDuFichier);
    string line;
+   vector<string> tableauLecture;
+   
 
-   while (getline(s, line)) {
-     cout << line << endl;
+   while (getline(s, line)) 
+   {
+      tableauLecture.push_back(line);
    }
    s.close();
+   
+   return tableauLecture;
 }
