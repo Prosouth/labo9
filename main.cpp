@@ -22,6 +22,7 @@ int main() {
 
    lecture("nato.txt");
    
+   
    return EXIT_SUCCESS;
 }
 
