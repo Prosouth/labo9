@@ -11,6 +11,7 @@
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
                    projectFiles="true">
+      <itemPath>dictionary.txt</itemPath>
       <itemPath>nato.txt</itemPath>
       <itemPath>nato_shuffled.txt</itemPath>
       <itemPath>ordered_dictionary.txt</itemPath>
@@ -45,10 +46,12 @@
       </toolsSet>
       <compileType>
         <ccTool>
-          <standard>8</standard>
+          <commandLine>-std=gnu++11</commandLine>
         </ccTool>
       </compileType>
       <item path="constantes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dictionary.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lecture.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -91,6 +94,8 @@
         </asmTool>
       </compileType>
       <item path="constantes.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="dictionary.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lecture.cpp" ex="false" tool="1" flavor2="0">
       </item>
