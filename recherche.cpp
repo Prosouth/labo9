@@ -8,10 +8,40 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
 using namespace std;
 
 
-int rechercheLineaire(vector<string> dictionnaire, string motCherche)
+
+
+int rechercheLineaire(const vector<string>& dictionnaire, const string& motCherche)
+{
+   for(int i = 0; i < dictionnaire.size(); ++i) {
+      if(motCherche == dictionnaire.at(i)) {
+         return i;
+      } else {
+         return dictionnaire.size()-1;
+      }
+   }
+}
+
+int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
+{
+   for(vector<string>::iterator i = begin; i != end; ++i) {
+      if(*i == motCherche){
+         return distance(begin, i);
+      } else {
+         return distance(begin, end);
+      }
+   }
+}
+
+int rechercheDichotomique(const vector<string>& dictionnaire, const string& motCherche)
+{
+   
+}
+
+int rechercheDichotomique()
 {
    
 }
