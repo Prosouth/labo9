@@ -25,7 +25,9 @@ int main() {
 
    vector<string> nato = lecture("nato.txt");
    
-   int position = rechercheDichotomique(nato.begin(), nato.end(), "Papa");
+   //int position = rechercheDichotomique(nato.begin(), nato.end(), "Papa");
+   
+   inverser(nato);
    
    //cout << "Le mot se trouve à la position " << position << endl;
    
