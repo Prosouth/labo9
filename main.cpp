@@ -35,7 +35,9 @@ int main() {
       cout << "Le mot est présent dans le dico." << endl;
    } else {
       cout << "Le mot n'est pas présent dans le dico." << endl;
-   }   
+   }
+   
+   inverser(nato);
    
    return EXIT_SUCCESS;
 }

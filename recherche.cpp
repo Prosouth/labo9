@@ -81,9 +81,6 @@ int rechercheDichotomique(const vector<string>::iterator begin, const vector<str
    size_t debut = distance(begin, begin);
    size_t fin = distance(end,end);
    auto milieu = floor(distance(begin, end) / 2);
- 
-   
-   
 }
 
 

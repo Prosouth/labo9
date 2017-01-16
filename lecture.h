@@ -19,6 +19,6 @@
 using namespace std;
 
 vector<string> lecture(string nomDuFichier);
-vector<string> inverser(const vector<string>& dictionnaireNonTrie);
+vector<string> inverser(vector<string>& dictionnaireNonTrie);
 
 #endif /* LECTURE_H */

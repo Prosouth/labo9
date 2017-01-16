@@ -24,10 +24,13 @@ vector<string> lecture(string nomDuFichier)
    return tableauLecture;
 }
 
-vector<string> inverser(const vector<string>& dictionnaireNonTrie)
+vector<string> inverser(vector<string>& dictionnaireNonTrie)
 {
-   for(auto i = dictionnaireNonTrie.begin(); i != dictionnaireNonTrie.end(); ++i)
+   vector<string> vecteurDeTri;
+   for(size_t i = dictionnaireNonTrie.size() - 1; 0 <= i; --i)
    {
-      cout << *i << " ";
+       vecteurDeTri.push_back(dictionnaireNonTrie[i]);
    }
+   dictionnaireNonTrie = vecteurDeTri;
+   
 }
