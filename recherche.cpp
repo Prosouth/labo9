@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <cmath>
 
 using namespace std;
 
@@ -17,18 +18,23 @@ using namespace std;
 int rechercheLineaire(const vector<string>& dictionnaire, const string& motCherche)
 {
    for(size_t i = 0; i < dictionnaire.size(); ++i) {
-      if(motCherche == dictionnaire.at(i)) 
+      if(motCherche == dictionnaire.at(i))
+      {
          return i;
+      }
    }
    
    return dictionnaire.size()-1;
 }
 
-int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
+int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
+                      const string& motCherche)
 {
    for(vector<string>::iterator i = begin; i != end; ++i) {
       if(*i == motCherche)
+      {
          return distance(begin, i);
+      }
    }
    
    return distance(begin, end); 
@@ -36,7 +42,35 @@ int rechercheLineaire(const vector<string>::iterator begin, const vector<string>
 
 int rechercheDichotomique(const vector<string>& dictionnaire, const string& motCherche)
 {
+   bool trouve = false;
+   size_t debut = 0,
+           fin,
+           milieu;
+   do 
+   {
+      milieu = floor((debut + fin) / 2);
+      if(dictionnaire[milieu] == motCherche) 
+      {
+         trouve = true;
+      } 
+      else if(motCherche > dictionnaire[milieu]) 
+      {
+         debut = milieu + 1;
+      } 
+      else 
+      {
+         fin = milieu - 1;
+      }
+   } while (!trouve && debut <= fin);
    
+   if(trouve)
+   {
+      cout << "La valeur " << motCherche << " est au rang " << milieu << endl;
+   }
+   else
+   {
+      cout << " La valeur n\' est pas dans le tableau" << endl;
+   }
 }
 
 int rechercheDichotomique(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
