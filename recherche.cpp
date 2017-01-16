@@ -30,7 +30,8 @@ int rechercheLineaire(const vector<string>& dictionnaire, const string& motCherc
 int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
                       const string& motCherche)
 {
-   for(vector<string>::iterator i = begin; i != end; ++i) {
+   for(vector<string>::iterator i = begin; i != end; ++i) 
+   {
       if(*i == motCherche)
       {
          return distance(begin, i);
@@ -44,7 +45,7 @@ int rechercheDichotomique(const vector<string>& dictionnaire, const string& motC
 {
    bool trouve = false;
    size_t debut = 0,
-           fin,
+           fin = dictionnaire.size() - 1,
            milieu;
    do 
    {
@@ -75,6 +76,12 @@ int rechercheDichotomique(const vector<string>& dictionnaire, const string& motC
 
 int rechercheDichotomique(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
 {
+   bool trouve = false;
+   size_t debut = distance(begin, begin);
+   size_t fin = distance(end,end);
+   auto milieu = floor(distance(begin, end) / 2);
+ 
+   
    
 }
 
