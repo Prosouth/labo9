@@ -16,24 +16,22 @@ using namespace std;
 
 int rechercheLineaire(const vector<string>& dictionnaire, const string& motCherche)
 {
-   for(int i = 0; i < dictionnaire.size(); ++i) {
-      if(motCherche == dictionnaire.at(i)) {
+   for(size_t i = 0; i < dictionnaire.size(); ++i) {
+      if(motCherche == dictionnaire.at(i)) 
          return i;
-      } else {
-         return dictionnaire.size()-1;
-      }
    }
+   
+   return dictionnaire.size()-1;
 }
 
 int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
 {
    for(vector<string>::iterator i = begin; i != end; ++i) {
-      if(*i == motCherche){
+      if(*i == motCherche)
          return distance(begin, i);
-      } else {
-         return distance(begin, end);
-      }
    }
+   
+   return distance(begin, end); 
 }
 
 int rechercheDichotomique(const vector<string>& dictionnaire, const string& motCherche)
@@ -41,7 +39,18 @@ int rechercheDichotomique(const vector<string>& dictionnaire, const string& motC
    
 }
 
-int rechercheDichotomique()
+int rechercheDichotomique(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
+{
+   
+}
+
+
+bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const vector<string>::iterator end)
+{
+    
+}
+
+bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last)
 {
    
 }

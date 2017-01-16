@@ -12,7 +12,11 @@
  */
 
 #include <cstdlib>
+#include <vector>
+#include <iostream>
+#include <string>
 
+#include "recherche.h"
 #include "lecture.h"
 
 using namespace std;
@@ -20,8 +24,11 @@ using namespace std;
 
 int main() {
 
-   lecture("nato.txt");
+   vector<string> nato = lecture("nato.txt");
    
+   int position = rechercheLineaire(nato.begin(), nato.end(),  "Papa");
+   
+   cout << "Le mot se trouve à la position " << position << endl;
    
    return EXIT_SUCCESS;
 }
