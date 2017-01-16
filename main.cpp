@@ -15,7 +15,6 @@
 #include <vector>
 #include <iostream>
 #include <string>
-
 #include "recherche.h"
 #include "lecture.h"
 
@@ -26,10 +25,9 @@ int main() {
 
    vector<string> nato = lecture("nato.txt");
    
-   int position = rechercheLineaire(nato.begin(), nato.end(),  "Papa");
+   int position = rechercheDichotomique(nato.begin(), nato.end(), "Papa");
    
-   cout << "Le mot se trouve à la position " << position << endl;
+   //cout << "Le mot se trouve à la position " << position << endl;
    
    return EXIT_SUCCESS;
 }
-
