@@ -25,9 +25,17 @@ int main() {
 
    vector<string> nato = lecture("nato.txt");
    
-   int position = rechercheDichotomique(nato.begin(), nato.end(), "Papa");
+   size_t first = 0;
+   size_t last = nato.size();
    
-   //cout << "Le mot se trouve à la position " << position << endl;
+   bool present = rechercheDichotomiqueRecursive(nato, first, last, "Zulu");
+   
+   if(present) {
+      cout << "Le mot est présent dans le dico." << endl;
+   } else {
+      cout << "Le mot n'est pas présent dans le dico." << endl;
+   }
+   
    
    return EXIT_SUCCESS;
 }

@@ -27,5 +27,8 @@ int rechercheDichotomique(const vector<string>& dictionnaire, const string& motC
 int rechercheDichotomique(const vector<string>::iterator begin, const vector<string>::iterator end, 
                           const string& motCherche);
 
+bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche);
+bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last, const string& motCherche);
+
 #endif /* RECHERCHE_H */
 
