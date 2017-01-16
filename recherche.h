@@ -19,7 +19,10 @@
 using namespace std;
 
 int rechercheLineaire(const vector<string>& dictionnaire, string motCherche);
+int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
+                      const string& motCherche);
 
+int rechercheDichotomique(const vector<string>& dictionnaire, const string& motCherche);
 
 #endif /* RECHERCHE_H */
 
