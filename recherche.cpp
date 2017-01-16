@@ -17,7 +17,8 @@ using namespace std;
 
 int rechercheLineaire(const vector<string>& dictionnaire, const string& motCherche)
 {
-   for(size_t i = 0; i < dictionnaire.size(); ++i) {
+   for(size_t i = 0; i < dictionnaire.size(); ++i) 
+   {
       if(motCherche == dictionnaire.at(i))
       {
          return i;
@@ -50,11 +51,11 @@ int rechercheDichotomique(const vector<string>& dictionnaire, const string& motC
    do 
    {
       milieu = floor((debut + fin) / 2);
-      if(dictionnaire[milieu] == motCherche) 
+      if(dictionnaire.at(milieu) == motCherche) 
       {
          trouve = true;
       } 
-      else if(motCherche > dictionnaire[milieu]) 
+      else if(motCherche > dictionnaire.at(milieu)) 
       {
          debut = milieu + 1;
       } 
@@ -86,12 +87,28 @@ int rechercheDichotomique(const vector<string>::iterator begin, const vector<str
 }
 
 
-bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const vector<string>::iterator end)
+bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
 {
-    
+   
 }
 
-bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last)
+bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last, const string& motCherche)
 {
+   int milieu = floor((first + last) / 2);
+   bool trouver = false;
+   
+   if(dictionnaire.at(milieu) == motCherche)
+   {
+      trouver = true;
+      return trouver; 
+   } 
+   else if (dictionnaire.at(milieu) > motCherche) 
+   {
+      return rechercheDichotomiqueRecursive(dictionnaire, first, milieu, motCherche);
+   } 
+   else
+   {
+      return rechercheDichotomiqueRecursive(dictionnaire, milieu, last, motCherche);
+   }
    
 }
