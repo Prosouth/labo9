@@ -115,8 +115,7 @@ bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const 
    else
    {
       return rechercheDichotomiqueRecursive(milieu + 1, end, motCherche);
-   }
-   
+   }   
 }
 
 

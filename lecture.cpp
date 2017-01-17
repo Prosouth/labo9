@@ -41,15 +41,15 @@ void inverser(vector<string>& dictionnaireNonInverse)
 
 void trier(vector<string>& dictionnaireAtrier)
 {  
-   for(size_t i = dictionnaireAtrier.size() - 1; i <= 1 ; --i)
+   for(size_t i = dictionnaireAtrier.size() - 1; i > 0 ; --i)
    {
-      for(size_t j = 0; j < i - 1; ++j)
+      for(size_t j = 0; j < i; ++j)
       {
-         if(dictionnaireAtrier[j+1] < dictionnaireAtrier[j])
+         if(dictionnaireAtrier[j + 1] < dictionnaireAtrier[j])
          {
             string tmp;
-            tmp = dictionnaireAtrier[j+1];
-            dictionnaireAtrier[j+1] = dictionnaireAtrier[j];
+            tmp = dictionnaireAtrier[j + 1];
+            dictionnaireAtrier[j + 1] = dictionnaireAtrier[j];
             dictionnaireAtrier[j] = tmp;
          }
       }
