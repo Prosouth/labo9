@@ -39,15 +39,22 @@ int main() {
    afficher(nato_ordre, "Nato");
    inverser(nato_ordre);
    afficher(nato_ordre, "Nato inverse");
+   inverser(nato_ordre); // Pour pouvoir le réutiliser par la suite
    cout << endl << endl;
    
    
    
    cout << "Test de recherche dichotomique" << endl;
    cout << "==============================" << endl;
-   cout << "On recherche Papa" << endl;
+   cout << "On recherche Echo" << endl;
   
    rechercheDichotomique(nato_ordre, "Echo");
+   cout << endl << endl;
+   
+   cout << "Test de recherche dichotomique récursive" << endl;
+   cout << "========================================" << endl;
+   
+   
    
    return EXIT_SUCCESS;
 }
