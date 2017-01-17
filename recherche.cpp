@@ -70,10 +70,7 @@ int rechercheDichotomique(const vector<string>& dictionnaire, const string& motC
 
 int rechercheDichotomique(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
 {
-   bool trouve = false;
-   size_t debut = distance(begin, begin);
-   size_t fin = distance(end,end);
-   auto milieu = floor(distance(begin, end) / 2);
+
 }
 
 
