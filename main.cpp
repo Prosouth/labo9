@@ -23,7 +23,7 @@ using namespace std;
 
 int main() {
 
-   vector<string> nato = lecture("nato_shuffled.txt");
+   vector<string> nato = lecture("nato.txt");
    
 
    size_t first = 0;
@@ -39,7 +39,7 @@ int main() {
 
    */
    afficher(nato, "Nato");
-   //inverser(nato);
+   inverser(nato);
    afficher(nato, "Nato inverse");
    
    

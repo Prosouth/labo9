@@ -33,26 +33,15 @@ void afficher(vector<string>& vecteurAfficher, const string& nomVecteur)
    }
 }
 
-vector<string> inverser(vector<string>& dictionnaireNonTrie)
+void inverser(vector<string>& dictionnaireNonInverse)
 {
-   /*vector<string> vecteurDeTri;
-   for(size_t i = 0; i < dictionnaireNonTrie.size(); ++i)
+   string temporaire;
+   for(size_t i = 0, j = dictionnaireNonInverse.size() - 1; i <= dictionnaireNonInverse.size()/ 2; i++, j--)
    {
-       //vecteurDeTri.push_back(dictionnaireNonTrie[i]);
+      temporaire = dictionnaireNonInverse.at(i);
+      dictionnaireNonInverse.at(i) = dictionnaireNonInverse.at(j);
+      dictionnaireNonInverse.at(j) = temporaire;
    }
-   dictionnaireNonTrie = vecteurDeTri;
-   */
-
-   int milieu = dictionnaireNonTrie.size() / 2;
-   int dernier = dictionnaireNonTrie.size() - 1;
-
-   for (int i = 0; i < milieu; i++) 
-   {
-     string temporaire = dictionnaireNonTrie[i];
-     dictionnaireNonTrie.at(i) = dernier - i;
-     dictionnaireNonTrie[dernier - i] = temporaire;
-   }
-
 }
 
 vector<string> trier(vector<string>& dictionnaireAtrier)

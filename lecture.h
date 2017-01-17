@@ -19,7 +19,7 @@
 using namespace std;
 
 vector<string> lecture(string nomDuFichier);
-vector<string> inverser(vector<string>& dictionnaireNonTrie);
+void inverser(vector<string>& dictionnaireNonInverse);
 vector<string> trier(vector<string>& dictionnaireAtrier);
 void afficher(vector<string>& vecteurAfficher, const string& nomVecteur);
 
