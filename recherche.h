@@ -43,7 +43,7 @@ Fonction qui effectue une recherche dichotomique sur un vecteur avec l'aide d'it
  @param itérateur qui pointe vers le début du vecteur
  @param itérateur qui pointe vers le fin du vecteur
  @param string contenant le mot cherché
- @return int qui retourne l'indice du mot trouvé
+ @return itérateur qui retourne l'indice du mot trouvé
  */
 vector<string>::iterator rechercheDichotomique(const vector<string>::iterator begin, const vector<string>::iterator end, 
                           const string& motCherche);
@@ -54,7 +54,7 @@ Fonction récursive qui effectue une recherche dichotomique sur un vecteur avec 
  @param itérateur qui pointe vers le début du vecteur
  @param itérateur qui pointe vers le fin du vecteur
  @param string contenant le mot cherché
- @return bool qui retrourne vrai si le la string cherchée est trouvée
+ @return bool qui retrourne vrai si la string cherchée est trouvée
  */
 bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, 
                          const vector<string>::iterator end, const string& motCherche);
@@ -66,7 +66,7 @@ Fonction récursive qui effectue une recherche dichotomique sur un vecteur avec 
  @param size_t indiquant l'emplacement du premier élément du vecteur
  @param size_t indiquant l'emplacement du dernier élément du vecteur
  @param string contenant le mot cherché
- @return bool qui retourne vrai si le la string cherchée est trouvée
+ @return bool qui retourne vrai si la string cherchée est trouvée
  */
 bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last, const string& motCherche);
 

@@ -13,7 +13,7 @@ Fonction qui prend un fichier .txt en paramètre et l'insère dans un vector
 vector<string> lecture(string nomDuFichier);
 
 /**
-Fonction qui inverser l'ordre d'un vecteur
+Fonction qui inverse l'ordre des éléments d'un vecteur
  @param Vecteur contenant le dictionnaire non inversé
  @return void
  */

@@ -9,7 +9,7 @@ vector<string> lecture(string nomDuFichier)
    string line;
    vector<string> tableauLecture;
    
-
+   //Lecture du fichier ligne par ligne
    while (getline(s, line)) 
    {
       tableauLecture.push_back(line);
@@ -41,6 +41,7 @@ void inverser(vector<string>& dictionnaireNonInverse)
 
 void trier(vector<string>& dictionnaireAtrier)
 {  
+   //Tri à bulles selon l'algorithme donné sur wikipédia
    for(size_t i = dictionnaireAtrier.size() - 1; i > 0 ; --i)
    {
       for(size_t j = 0; j < i; ++j)

@@ -18,7 +18,7 @@ size_t rechercheLineaire(const vector<string>& dictionnaire, const string& motCh
       }
    }
    
-   return NON_TROUVE;
+   return NON_TROUVE; //Retourne une très grande valeur quand le mot n'est pas trouvé
 }
 
 size_t rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
@@ -28,11 +28,11 @@ size_t rechercheLineaire(const vector<string>::iterator begin, const vector<stri
    {
       if(*i == motCherche)
       {
-         return distance(begin, i);
+         return distance(begin, i); //Retourne l'indice ou le mot est trouvé
       }
    }
    
-   return distance(begin, end); 
+   return distance(begin, end); //Retourne la fin du dico quand il n'est pas trouvé
 }
 
 int rechercheDichotomique(const vector<string>& dictionnaire, const string& motCherche)
@@ -41,6 +41,7 @@ int rechercheDichotomique(const vector<string>& dictionnaire, const string& motC
    size_t debut = 0,
            fin = dictionnaire.size() - 1,
            milieu;
+   //Selon l'algorithme dichotomique donné sur wikipédia
    do 
    {
       milieu = floor((debut + fin) / 2);
@@ -72,6 +73,7 @@ vector<string>::iterator rechercheDichotomique(vector<string>::iterator begin, v
 {
     bool trouve = false;
     vector<string>::iterator milieu;
+    //Ici on utilise les itérateurs pointant sur le dico à la place des indices
     do 
     {
         milieu = begin + (distance(begin, end) / 2);
@@ -98,12 +100,13 @@ vector<string>::iterator rechercheDichotomique(vector<string>::iterator begin, v
 bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
 {
    vector<string>::iterator milieu;
-   milieu = begin + (distance(begin, end) / 2);
+   milieu = begin + (distance(begin, end) / 2); //itérateur "milieu" pointera sur le milieu du vecteur
    
-   if(end < begin) 
+   if(end < begin) //Cas trivial permettant de sortir de la récursive
    {
       return false;
    }
+   
    if(*milieu == motCherche)
    {
       return true; 
@@ -121,13 +124,12 @@ bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const 
 
 bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last, const string& motCherche)
 {
-   int milieu = floor((first + last) / 2);
+   int milieu = floor((first + last) / 2); //Calcul de l'indice du milieu du vecteur 
    
-   if(last < first)
+   if(last < first) //Cas trivial permettant de sortir de la récursive
    {
       return false;
    }
-   
    
    if(dictionnaire.at(milieu) == motCherche)
    {
