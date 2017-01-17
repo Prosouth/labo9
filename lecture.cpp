@@ -34,3 +34,27 @@ vector<string> inverser(vector<string>& dictionnaireNonTrie)
    dictionnaireNonTrie = vecteurDeTri;
    
 }
+
+vector<string> trier(vector<string>& dictionnaireAtrier)
+{  
+   for(size_t i = dictionnaireAtrier.size() - 1; i <= 1 ; --i)
+   {
+      bool tableauTrier = true;
+      for(size_t j = 0; j < i - 1; ++j)
+      {
+         if(dictionnaireAtrier[j+1] < dictionnaireAtrier[j])
+         {
+            string tmp;
+            tmp = dictionnaireAtrier[j+1];
+            dictionnaireAtrier[j+1] = dictionnaireAtrier[j];
+            dictionnaireAtrier[j] = tmp;
+                    
+            tableauTrier = false;
+         }
+      }
+      if(tableauTrier)
+      {
+         return dictionnaireAtrier;
+      }
+   }  
+}

@@ -20,5 +20,6 @@ using namespace std;
 
 vector<string> lecture(string nomDuFichier);
 vector<string> inverser(vector<string>& dictionnaireNonTrie);
+vector<string> trier(vector<string>& dictionnaireAtrier);
 
 #endif /* LECTURE_H */

@@ -23,13 +23,13 @@ using namespace std;
 
 int main() {
 
-   vector<string> nato = lecture("nato.txt");
+   vector<string> nato = lecture("nato_shuffled.txt");
    
 
    size_t first = 0;
    size_t last = nato.size();
    
-   bool present = rechercheDichotomiqueRecursive(nato, first, last, "Zulu");
+   bool present = rechercheDichotomique(nato, "Alpha");
    
    if(present) {
       cout << "Le mot est présent dans le dico." << endl;
@@ -37,7 +37,10 @@ int main() {
       cout << "Le mot n'est pas présent dans le dico." << endl;
    }
    
-   inverser(nato);
+   trier(nato);
+   
+   
+   
    
    return EXIT_SUCCESS;
 }
