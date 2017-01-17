@@ -20,5 +20,6 @@ using namespace std;
 
 vector<string> lecture(string nomDuFichier);
 vector<string> inverser(vector<string>& dictionnaireNonTrie);
+void afficher(vector<string>& vecteurAfficher, const string& nomVecteur);
 
 #endif /* LECTURE_H */

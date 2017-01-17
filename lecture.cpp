@@ -24,13 +24,35 @@ vector<string> lecture(string nomDuFichier)
    return tableauLecture;
 }
 
+void afficher(vector<string>& vecteurAfficher, const string& nomVecteur)
+{
+   cout << "Affichage du vecteur: " << nomVecteur << endl;
+   for(size_t i = 0; i < vecteurAfficher.size(); i++)
+   {
+      cout << vecteurAfficher[i] << endl;
+   }
+}
+
 vector<string> inverser(vector<string>& dictionnaireNonTrie)
 {
-   vector<string> vecteurDeTri;
-   for(size_t i = dictionnaireNonTrie.size() - 1; 0 <= i; --i)
+   /*vector<string> vecteurDeTri;
+   for(size_t i = 0; i < dictionnaireNonTrie.size(); ++i)
    {
-       vecteurDeTri.push_back(dictionnaireNonTrie[i]);
+       //vecteurDeTri.push_back(dictionnaireNonTrie[i]);
    }
    dictionnaireNonTrie = vecteurDeTri;
+   */
    
+
+   int milieu = dictionnaireNonTrie.size() / 2;
+   int dernier = dictionnaireNonTrie.size() - 1;
+
+   for (int i = 0; i < milieu; i++) 
+   {
+     string temporaire = dictionnaireNonTrie[i];
+     dictionnaireNonTrie.at(i) = dernier - i;
+     dictionnaireNonTrie[dernier - i] = temporaire;
+   }
+
+
 }

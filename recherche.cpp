@@ -13,8 +13,6 @@
 using namespace std;
 
 
-
-
 int rechercheLineaire(const vector<string>& dictionnaire, const string& motCherche)
 {
    for(size_t i = 0; i < dictionnaire.size(); ++i) 

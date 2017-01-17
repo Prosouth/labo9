@@ -29,15 +29,19 @@ int main() {
    size_t first = 0;
    size_t last = nato.size();
    
-   bool present = rechercheDichotomiqueRecursive(nato, first, last, "Zulu");
+   //bool present = rechercheDichotomiqueRecursive(nato, first, last, "Zulu");
    
-   if(present) {
+   /*if(present) {
       cout << "Le mot est présent dans le dico." << endl;
    } else {
       cout << "Le mot n'est pas présent dans le dico." << endl;
    }
-   
+   */
+   afficher(nato, "Nato");
    inverser(nato);
+   afficher(nato, "Nato inverse");
+   
+   
    
    return EXIT_SUCCESS;
 }
