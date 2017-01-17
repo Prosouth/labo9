@@ -25,6 +25,7 @@ int main() {
 
    vector<string> nato_ordre = lecture("nato.txt");
    vector<string> nato_suffled  = lecture("nato_shuffled.txt");
+   int indice;
 
 
    cout << " Test de tri du vecteur" << endl;
@@ -53,6 +54,18 @@ int main() {
    
    cout << "Test de recherche dichotomique récursive" << endl;
    cout << "========================================" << endl;
+   cout << "On recherche Papa" << endl;
+   
+   cout << boolalpha << 
+           rechercheDichotomiqueRecursive(nato_ordre,0,nato_ordre.size() -1, "Papa") << endl;
+   
+   cout << "Papa est donc dans la liste";
+   
+   
+   cout << "Recherche Lineaire" << endl;
+   cout << "==================" << endl;
+   cout << "Papa ou t\'es?" << endl;
+   indice = rechercheLineaire(nato_ordre, "Papa");
    
    
    
