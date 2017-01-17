@@ -7,33 +7,30 @@ using namespace std;
 
 /**
 Fonction qui prend un fichier .txt en paramètre et l'insère dans un vector
- @param Tableau d'enum contenant l'état du jeu
- @param string saisieUtilisateur qui contient la saisie de l'utilisateur
- @return bool qui est vrai si le déplacement est valide
+ @param string le nom du fichier complet
+ @return vecteur rempli par le fichier
  */
 vector<string> lecture(string nomDuFichier);
 
 /**
 Fonction qui inverser l'ordre d'un vecteur
- @param Tableau d'enum contenant l'état du jeu
- @param string saisieUtilisateur qui contient la saisie de l'utilisateur
- @return bool qui est vrai si le déplacement est valide
+ @param Vecteur contenant le dictionnaire non inversé
+ @return void
  */
 void inverser(vector<string>& dictionnaireNonInverse);
 
 /**
 Fonction qui prend un vecteur non ordré en paramètre et l'ordonne
- @param Tableau d'enum contenant l'état du jeu
- @param string saisieUtilisateur qui contient la saisie de l'utilisateur
- @return bool qui est vrai si le déplacement est valide
+ @param Vecteur contenant un dictionnaire non trié
+ @return void
  */
 void trier(vector<string>& dictionnaireAtrier);
 
 /**
 Fonction qui affiche les valeurs d'un vecteur avec une string juste au-dessus.
- @param Tableau d'enum contenant l'état du jeu
- @param string saisieUtilisateur qui contient la saisie de l'utilisateur
- @return bool qui est vrai si le déplacement est valide
+ @param Vecteur à afficher contenant des strings.
+ @param string qui contient la ligne à afficher avant l'affichage du vecteur
+ @return void
  */
 void afficher(vector<string>& vecteurAfficher, const string& nomVecteur);
 
