@@ -4,7 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>constantes.h</itemPath>
       <itemPath>lecture.h</itemPath>
       <itemPath>recherche.h</itemPath>
     </logicalFolder>
@@ -49,8 +48,6 @@
           <commandLine>-std=gnu++11</commandLine>
         </ccTool>
       </compileType>
-      <item path="constantes.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="dictionary.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lecture.cpp" ex="false" tool="1" flavor2="0">
@@ -93,8 +90,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="constantes.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="dictionary.txt" ex="false" tool="3" flavor2="0">
       </item>
       <item path="lecture.cpp" ex="false" tool="1" flavor2="0">

@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 #include "recherche.h"
 #include <iostream>
 #include <vector>
@@ -12,8 +6,9 @@
 
 using namespace std;
 
+const int NON_TROUVE = -1;
 
-int rechercheLineaire(const vector<string>& dictionnaire, const string& motCherche)
+size_t rechercheLineaire(const vector<string>& dictionnaire, const string& motCherche)
 {
    for(size_t i = 0; i < dictionnaire.size(); ++i) 
    {
@@ -23,7 +18,7 @@ int rechercheLineaire(const vector<string>& dictionnaire, const string& motCherc
       }
    }
    
-   return dictionnaire.size()-1;
+   return NON_TROUVE;
 }
 
 int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 

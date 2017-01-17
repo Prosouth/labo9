@@ -1,23 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-/* 
- * File:   main.cpp
- * Author: Nair
- *
- * Created on 10. janvier 2017, 10:48
- */
-
+/* ---------------------------
+ Laboratoire: 9 - Dictionnaire
+ Fichier    : main.cpp
+ Auteur(s)  : Nair Alic et Sébastien Saez
+ Date       : 17 Janvier 2017
+ 
+ But        : Le but de ce laboratoire est d'établir les bases d'un correcteur orthographique       
+ 
+ Remarque(s) : Tout à l'air de fonctionner correctement.
+ 
+ Compilateur : g++ 6.2.1 20160830
+ --------------------------- */
 #include <cstdlib>
 #include <vector>
 #include <iostream>
 #include <string>
 #include "recherche.h"
 #include "lecture.h"
-
 using namespace std;
 
 
@@ -44,20 +42,23 @@ int main() {
    cout << endl << endl;
    
    
-   
    cout << "Test de recherche dichotomique" << endl;
    cout << "==============================" << endl;
    cout << "On recherche Echo" << endl;
   
+   
    rechercheDichotomique(nato_ordre, "Echo");
    cout << endl << endl;
+   
    
    cout << "Test de recherche dichotomique récursive" << endl;
    cout << "========================================" << endl;
    cout << "On recherche Papa" << endl;
    
+   
    cout << boolalpha << 
            rechercheDichotomiqueRecursive(nato_ordre,0,nato_ordre.size() -1, "Papa") << endl;
+   
    
    cout << "Papa est donc dans la liste";
    
@@ -65,7 +66,7 @@ int main() {
    cout << "Recherche Lineaire" << endl;
    cout << "==================" << endl;
    cout << "Papa ou t\'es?" << endl;
-   indice = rechercheLineaire(nato_ordre, "Papa");
+   cout << "En position: " << rechercheLineaire(nato_ordre, "Papa");
    
    
    
