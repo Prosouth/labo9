@@ -58,9 +58,14 @@ int main() {
    
    cout << boolalpha << 
            rechercheDichotomiqueRecursive(nato_ordre,0,nato_ordre.size() -1, "Papa") << endl;
+   cout << "Papa est donc dans la liste" << endl << endl;
+   
+   cout << "On recherche Caca" << endl;
    
    
-   cout << "Papa est donc dans la liste";
+   cout << boolalpha << 
+           rechercheDichotomiqueRecursive(nato_ordre,0,nato_ordre.size() -1, "Caca") << endl;
+   cout << "Caca n\'est donc pas dans la liste" << endl;
    
    
    cout << "Recherche Lineaire" << endl;

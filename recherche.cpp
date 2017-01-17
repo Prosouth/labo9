@@ -82,22 +82,23 @@ bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const 
 bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last, const string& motCherche)
 {
    int milieu = floor((first + last) / 2);
-   bool trouver = false;
    
-   
+   if(last < first)
+   {
+      return false;
+   }
    
    
    if(dictionnaire.at(milieu) == motCherche)
    {
-      trouver = true;
-      return trouver; 
+      return true; 
    } 
    else if (dictionnaire.at(milieu) > motCherche) 
    {
-      return rechercheDichotomiqueRecursive(dictionnaire, first, milieu, motCherche);
+      return rechercheDichotomiqueRecursive(dictionnaire, first, milieu - 1, motCherche);
    } 
    else
    {
-      return rechercheDichotomiqueRecursive(dictionnaire, milieu, last, motCherche);
+      return rechercheDichotomiqueRecursive(dictionnaire, milieu + 1, last, motCherche);
    }
 }
