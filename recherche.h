@@ -62,8 +62,10 @@ bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin,
 
 /**
 Fonction récursive qui effectue une recherche dichotomique sur un vecteur avec l'aide d'indices sur les vecteurs 
- @param Tableau d'enum contenant l'état du jeu
- @param string saisieUtilisateur qui contient la saisie de l'utilisateur
+ @param vecteur de string en référence constante contenant le dictionnaire
+ @param size_t indiquant l'emplacement du premier élément du vecteur
+ @param size_t indiquant l'emplacement du dernier élément du vecteur
+ @param string contenant le mot cherché
  @return bool qui retourne vrai si le la string cherchée est trouvée
  */
 bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last, const string& motCherche);
