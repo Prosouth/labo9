@@ -73,7 +73,6 @@ int rechercheDichotomique(const vector<string>::iterator begin, const vector<str
 
 }
 
-
 vector<string>::iterator rechercheDichotomiqueRecursive(vector<string>::iterator begin, vector<string>::iterator end, const string& motCherche)
 {
     bool trouve = false;
@@ -96,7 +95,7 @@ vector<string>::iterator rechercheDichotomiqueRecursive(vector<string>::iterator
                 end = milieu - 1;
             }
         }
-    } while (trouve == false && begin <= end);
+    } while (!trouve && begin <= end);
     return milieu;
 }
 
