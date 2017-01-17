@@ -74,9 +74,30 @@ int rechercheDichotomique(const vector<string>::iterator begin, const vector<str
 }
 
 
-bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
+vector<string>::iterator rechercheDichotomiqueRecursive(vector<string>::iterator begin, vector<string>::iterator end, const string& motCherche)
 {
-   
+    bool trouve = false;
+    vector<string>::iterator milieu;
+    do 
+    {
+        milieu = begin + (distance(begin, end) / 2);
+        if (*milieu == motCherche) 
+        {
+            trouve = true;
+        } 
+        else 
+        {
+            if (motCherche > *milieu) 
+            {
+                begin = milieu + 1;
+            }
+            else 
+            {
+                end = milieu - 1;
+            }
+        }
+    } while (trouve == false && begin <= end);
+    return milieu;
 }
 
 bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last, const string& motCherche)

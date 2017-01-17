@@ -56,7 +56,8 @@ Fonction récursive qui effectue une recherche dichotomique sur un vecteur avec 
  @param string contenant le mot cherché
  @return bool qui retrourne vrai si le la string cherchée est trouvée
  */
-bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche);
+vector<string>::iterator rechercheDichotomiqueRecursive(const vector<string>::iterator begin, 
+                         const vector<string>::iterator end, const string& motCherche);
 
 
 /**
