@@ -19,7 +19,7 @@
 using namespace std;
 
 
-int rechercheLineaire(const vector<string>& dictionnaire, string motCherche);
+int rechercheLineaire(const vector<string>& dictionnaire, const string& motCherche);
 int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
                       const string& motCherche);
 

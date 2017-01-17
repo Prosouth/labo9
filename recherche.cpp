@@ -92,6 +92,9 @@ bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t f
    int milieu = floor((first + last) / 2);
    bool trouver = false;
    
+   
+   
+   
    if(dictionnaire.at(milieu) == motCherche)
    {
       trouver = true;
