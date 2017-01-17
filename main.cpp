@@ -27,15 +27,19 @@ int main() {
    vector<string> nato_suffled  = lecture("nato_shuffled.txt");
 
 
-   
+   cout << " Test de tri du vecteur" << endl;
+   cout << "============================" << endl;
    afficher(nato_suffled, "nato_shuffled.txt");
    trier(nato_suffled);
    afficher(nato_suffled, "nato_suffled.txt remis en ordre");
-
+   cout << endl << endl;
+   
    cout << " Test d'inversion du vecteur" << endl;
+   cout << "============================" << endl;
    afficher(nato_ordre, "Nato");
    inverser(nato_ordre);
    afficher(nato_ordre, "Nato inverse");
+   cout << endl << endl;
    
    
    return EXIT_SUCCESS;
