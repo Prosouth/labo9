@@ -22,10 +22,10 @@ Fonction qui effectue une recherche linéaire sur un vecteur en utilisant des it
  @param itérateur qui pointe vers le début du vecteur
  @param itérateur qui pointe vers la fin du vecteur
  @param String qui contient la recherche 
- @return size_t qui retourne une valeur très grande si la valeur n'a pas été
+ @return size_t qui retourne dico.end si la valeur n'a pas été
  *       trouvée. Si la valeur est trouvée, on retourne l'indice.
  */
-int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
+size_t rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
                       const string& motCherche);
 
 

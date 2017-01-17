@@ -65,8 +65,8 @@ int main() {
    
    cout << "Recherche Lineaire" << endl;
    cout << "==================" << endl;
-   cout << "Papa ou t\'es?" << endl;
-   cout << "En position: " << rechercheLineaire(nato_ordre, "Papa");
+   cout << "-Papa ou t\'es?" << endl;
+   cout << "-En position: " << rechercheLineaire(nato_ordre, "Papa");
    
    
    

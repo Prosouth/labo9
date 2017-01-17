@@ -21,7 +21,7 @@ size_t rechercheLineaire(const vector<string>& dictionnaire, const string& motCh
    return NON_TROUVE;
 }
 
-int rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
+size_t rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
                       const string& motCherche)
 {
    for(vector<string>::iterator i = begin; i != end; ++i) 

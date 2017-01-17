@@ -20,7 +20,7 @@ Fonction qui inverser l'ordre d'un vecteur
 void inverser(vector<string>& dictionnaireNonInverse);
 
 /**
-Fonction qui prend un vecteur non ordré en paramètre et l'ordonne
+Fonction qui prend un vecteur non ordré en paramètre et l'ordonne avec le tri à bulles
  @param Vecteur contenant un dictionnaire non trié
  @return void
  */
