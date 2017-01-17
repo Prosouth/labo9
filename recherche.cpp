@@ -68,12 +68,7 @@ int rechercheDichotomique(const vector<string>& dictionnaire, const string& motC
    }
 }
 
-int rechercheDichotomique(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
-{
-
-}
-
-vector<string>::iterator rechercheDichotomiqueRecursive(vector<string>::iterator begin, vector<string>::iterator end, const string& motCherche)
+vector<string>::iterator rechercheDichotomique(vector<string>::iterator begin, vector<string>::iterator end, const string& motCherche)
 {
     bool trouve = false;
     vector<string>::iterator milieu;
@@ -98,6 +93,14 @@ vector<string>::iterator rechercheDichotomiqueRecursive(vector<string>::iterator
     } while (!trouve && begin <= end);
     return milieu;
 }
+
+
+bool rechercheDichotomiqueRecursive(const vector<string>::iterator begin, const vector<string>::iterator end, const string& motCherche)
+{
+
+}
+
+
 
 bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t first, size_t last, const string& motCherche)
 {
