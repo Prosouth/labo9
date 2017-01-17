@@ -42,5 +42,12 @@ int main() {
    cout << endl << endl;
    
    
+   
+   cout << "Test de recherche dichotomique" << endl;
+   cout << "==============================" << endl;
+   cout << "On recherche Papa" << endl;
+  
+   rechercheDichotomique(nato_ordre, "Echo");
+   
    return EXIT_SUCCESS;
 }

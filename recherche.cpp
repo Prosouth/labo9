@@ -105,5 +105,4 @@ bool rechercheDichotomiqueRecursive(const vector<string>& dictionnaire, size_t f
    {
       return rechercheDichotomiqueRecursive(dictionnaire, milieu, last, motCherche);
    }
-   
 }
