@@ -17,7 +17,6 @@ size_t rechercheLineaire(const vector<string>& dictionnaire, const string& motCh
          return i;
       }
    }
-   
    return NON_TROUVE;
 }
 

@@ -19,10 +19,11 @@
 using namespace std;
 
 
-int main() {
-
+int main() 
+{
    vector<string> nato_ordre = lecture("nato.txt");
    vector<string> nato_suffled  = lecture("nato_shuffled.txt");
+   vector<string> fat_dictionnaire = lecture("ordered_dictionary.txt");
    int indice;
 
 
@@ -54,12 +55,9 @@ int main() {
    cout << "Test de recherche dichotomique récursive" << endl;
    cout << "========================================" << endl;
    cout << "On recherche Papa" << endl;
-   
-   
    cout << boolalpha << 
            rechercheDichotomiqueRecursive(nato_ordre,0,nato_ordre.size() -1, "Papa") << endl;
    cout << "Papa est donc dans la liste" << endl << endl;
-   
    cout << "On recherche Caca" << endl;
    
    
@@ -72,7 +70,13 @@ int main() {
    cout << "==================" << endl;
    cout << "-Papa ou t\'es?" << endl;
    cout << "-En position: " << rechercheLineaire(nato_ordre, "Papa");
+   cout << endl << endl;
    
+   cout << "Recherche dichotomique récursive avec un gros dictionnaire" << endl;
+   cout << "==========================================================" << endl;
+   cout << "-bigotednesses es-tu la?" << endl;
+   cout << rechercheDichotomiqueRecursive(fat_dictionnaire,0,fat_dictionnaire.size(), "bigotednesses");
+   cout << endl << endl;
    
    
    return EXIT_SUCCESS;

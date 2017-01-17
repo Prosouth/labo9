@@ -43,7 +43,7 @@ Fonction qui effectue une recherche dichotomique sur un vecteur avec l'aide d'it
  @param itérateur qui pointe vers le début du vecteur
  @param itérateur qui pointe vers le fin du vecteur
  @param string contenant le mot cherché
- @return int qui retourne l'indice du mot trouvé
+ @return itérateur qui retourne l'indice du mot trouvé
  */
 vector<string>::iterator rechercheDichotomique(const vector<string>::iterator begin, const vector<string>::iterator end, 
                           const string& motCherche);
