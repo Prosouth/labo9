@@ -17,8 +17,7 @@ size_t rechercheLineaire(const vector<string>& dictionnaire, const string& motCh
          return i;
       }
    }
-   
-   return NON_TROUVE; //Retourne une très grande valeur quand le mot n'est pas trouvé
+   return NON_TROUVE;
 }
 
 size_t rechercheLineaire(const vector<string>::iterator begin, const vector<string>::iterator end, 
