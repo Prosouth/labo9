@@ -23,25 +23,19 @@ using namespace std;
 
 int main() {
 
-   vector<string> nato = lecture("nato.txt");
-   
+   vector<string> nato_ordre = lecture("nato.txt");
+   vector<string> nato_suffled  = lecture("nato_shuffled.txt");
 
-   size_t first = 0;
-   size_t last = nato.size();
-   
-   //bool present = rechercheDichotomiqueRecursive(nato, first, last, "Zulu");
-   
-   /*if(present) {
-      cout << "Le mot est présent dans le dico." << endl;
-   } else {
-      cout << "Le mot n'est pas présent dans le dico." << endl;
-   }
 
-   */
-   afficher(nato, "Nato");
-   inverser(nato);
-   afficher(nato, "Nato inverse");
    
+   afficher(nato_suffled, "nato_shuffled.txt");
+   trier(nato_suffled);
+   afficher(nato_suffled, "nato_suffled.txt remis en ordre");
+
+   cout << " Test d'inversion du vecteur" << endl;
+   afficher(nato_ordre, "Nato");
+   inverser(nato_ordre);
+   afficher(nato_ordre, "Nato inverse");
    
    
    return EXIT_SUCCESS;
